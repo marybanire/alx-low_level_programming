@@ -1,0 +1,7 @@
+ # 942 "/usr/include/studio.h" 3 4
+
+ # 3 "main.c"
+ int main(void)
+ {
+  return (0);
+ } 
