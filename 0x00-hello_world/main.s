@@ -1,21 +1,21 @@
-     .file "main.c"
-     .text
-     .global main
-     .type main, @function
- main:
- .LFBO:
+      .file    "main.c" 
+      .text
+      .global main
+      .type   main, @function
+  main:
+  .LFBO:
       .cfi_startproc
       pushq   %rbp
       .cfi_def_cfa_offset 16
       .cfi_offset 6, -16
-       movq    %rsp, %rbp
+      movq    %rsp, %rbp
       .cfi_def_cfa_register 6
       movl    $0, %eax
-      popq    %rbq
+      popq    &rbp
       .cfi_def_cfa 7, 8
       ret
-      .cfi_endproc
+      .cfi -endproc
   .LFEO:
        .size main, .-main
        .ident "GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.2) 5.4.0 20160609"
-       .section   .note.GNU-stack,"",@progbits
+       .section   note.GNU-stack, "",@progbits
