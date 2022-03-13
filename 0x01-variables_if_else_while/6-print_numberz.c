@@ -1,11 +1,12 @@
 #include <stdio.h>
-/** main - entry block
+/**
+ * main - entry block
  * @void: no argument
  * Return: 0
  **/
 int main(void)
 {
-int i = 0
+int i = 0;
 
 while (i < 10)
 {
