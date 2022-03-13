@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main -entry block
+ * main - entry block
  * @void: no argument
  * Return: 0 (Success)
  **/
@@ -10,7 +10,7 @@ char c;
 
 for (c = 'a'; c <= 'z'; c++)
 {
-if (c != 'e' &7 c != 'q')
+if (c != 'e' && c != 'q')
 putchar(c);
 }
 putchar('\n');
