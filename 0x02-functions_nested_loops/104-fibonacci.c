@@ -11,7 +11,7 @@ int count;
 unsigned long x, y, z, a, b, c, carry;
 x = 0;
 y = 1;
-for(count = 1; count <= 90; count++)
+for (count = 1; count <= 90; count++)
 {
 z = x + y;
 x = y;
@@ -24,7 +24,7 @@ b = y % 1000;
 y = y / 1000;
 while (count <= 98)
 {
-carry= (a+b) / 1000;
+carry = (a + b) / 1000;
 c = (a + b) - carry * 1000;
 z = (x + y) + carry;
 x = y;
