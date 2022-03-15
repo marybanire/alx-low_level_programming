@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * print_time_table: print times up to input
- *
+ * print_times_table: print times up to input
+ * Description: Writes times table up to input not exceding 15
  * @n: size of times table
  * Return: Nothing
  */
