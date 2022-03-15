@@ -1,18 +1,17 @@
 #include "main.h"
 /**
- * print_time_table - print times up to input
+ * print_time_table: print times up to input
  *
  * @n: size of times table
  * Return: Nothing
  */
-
 void print_times_table(int n)
 {
 int y, x, prod;
 
 if (n <= 15 && n >= 0)
 {
-for (y =0; y <= n; y++)
+for (y = 0; y <= n; y++)
 {
 for (x = 0; x <= n; x++)
 {
@@ -30,11 +29,12 @@ _putchar((prod % 10) + '0');
 }
 else if (prod >= 10 && prod < 100)
 {
--putchar(' ');
+_putchar(' ');
 _putchar((prod / 10) + '0');
 _putchar((prod % 10) + '0');
 }
-else if (prod >=100 && x != 0)
+else if (prod >= 100 && x != 0)
+{
 _putchar((prod / 100) + '0');
 _putchar((prod / 10) % 10 + '0');
 _putchar((prod % 10) + '0');
