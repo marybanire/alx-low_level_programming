@@ -28,7 +28,7 @@ if (prod >= 10)
 _putchar((prod / 10) + '0');
 _putchar((prod % 10) + '0');
 }
-else if ((prod < 10) && (x !=0))
+else if ((prod < 10) && (x != 0))
 {
 _putchar(' ');
 _putchar((prod % 10) + '0');
@@ -39,6 +39,3 @@ _putchar((prod % 10) + '0');
 _putchar('\n');
 }
 }
-
-
-
