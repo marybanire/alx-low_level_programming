@@ -18,7 +18,7 @@ if (n1 > 9)
 {
 while (n1 >= 10)
 {
-val =val * 10;
+val = val * 10;
 n1 = n1 / 10;
 }
 _putchar((n2 / val) + '0');
