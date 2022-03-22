@@ -12,7 +12,7 @@ int j = 0;
 char temp[1000];
 while (s[i] != '\0')
 {
-i++
+i++;
 }
 for (; i > 0; i--)
 {
