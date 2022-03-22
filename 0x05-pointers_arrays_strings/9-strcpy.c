@@ -7,6 +7,7 @@
  * Return: dest pointer
  **/
 char *_strcpy(char *dest, char *src)
+{
 int i;
 i = 0;
 while (i >= 0)
