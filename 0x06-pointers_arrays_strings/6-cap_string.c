@@ -2,6 +2,7 @@
 #include <stddef.h>
 #include <stdio.h>
 /**
+
  * upper - capitalizes a letter if it is lowercase
  * @c: pointer to a string
  * Return: pointer to string
@@ -25,6 +26,7 @@ char *word = " \t\n,;.!?\"(){}";
 while (word[i] != '\0')
 {
 if (c == word[i])
+return (1);
 i++;
 }
 return (0);
@@ -42,7 +44,7 @@ return (NULL);
 upper(str);
 if (str[0] == '\0')
 return (str);
-for (i = 1; str [i] != '\0'; i++)
+for (i = 1; str[i] != '\0'; i++)
 {
 if (new_world(str[i -1]) == 1)
 {
