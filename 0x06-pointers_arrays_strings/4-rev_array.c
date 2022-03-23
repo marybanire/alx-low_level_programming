@@ -13,7 +13,7 @@ i = 0;
 for (i = 0; i < n; i++)
 {
 temp = a[n - 1];
-a[n -1] = a[i];
+a[n - 1] = a[i];
 a[i] = temp;
 n--;
 }
