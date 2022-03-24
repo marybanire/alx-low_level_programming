@@ -9,12 +9,12 @@
  **/
 char *_strncat(char *dest, char *src, int n)
 {
-int i, j;
+int count = 0, count2 = 0;
 
-i = 0;
-
-while (dest[i] != '\0')
-i++;
+while (*(dest + count != '\0')
+{
+count++;
+}
 
 for (j = 0; j < n; j++)
 {
