@@ -32,7 +32,7 @@ i++;
 return (0);
 }
 /**
- * cap_string - capitalize all works in a string
+ * cap_string - capitalize all words in a string
  * @str: string to modify
  * Return: pointer to str
  **/
@@ -53,4 +53,3 @@ upper(&str[i]);
 }
 return (str);
 }
-
