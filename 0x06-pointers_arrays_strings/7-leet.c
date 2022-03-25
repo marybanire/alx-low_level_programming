@@ -4,7 +4,7 @@
  * leet - convert string to leet speak
  * @c: string to convert
  * Description: replaces a, e, o, and t with 4, 3, 0, 7, and 1 respectively
- * Return: string c 
+ * Return: string c
  **/
 char *leet(char *c)
 {
