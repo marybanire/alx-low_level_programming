@@ -20,7 +20,7 @@ c2++;
 if (c1 >= c2)
 bg = c1;
 else
-bg c2;
+bg = c2;
 if (size_r <= bg + 1)
 return (0);
 r[bg + 1] = '\0';
