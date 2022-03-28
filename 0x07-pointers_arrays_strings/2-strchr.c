@@ -2,31 +2,23 @@
 
 /**
  * _strchr - locates a character in a string
- * @src: source string
- * @c: character to search for
- * Description: searches string for character, returns pointer to char
- * Return: pointer to char
+ * @src: string
+ * @c: string 
+ * Return: a pointer to the first occurrence of character c in the string s
+ * or NULL if character is not found
  **/
 
 char *_strchr(char *src, char c)
 {
-int i;
-if (src == NULL)
-{
-return (NULL);
-}
+int count;
 
-for (i = 0; src[i] != '\0'; i++)
+for (count = 0; s[count] != '\0'; count++)
 {
-if (src[i] == c)
-{
-return (&src[i]);
-}
-}
 
-if (src[i] == c)
-{
-return (&src[i]);
+if (s[count] == c)
+return (s + count);
 }
-return (NULL);
+if (s[count] == c)
+return (s + count);
+return (0);
 }
