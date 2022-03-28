@@ -6,7 +6,7 @@
  * Return: a pointer to the first occurrence of character c in the string s
  * or NULL if character is not found
  */
-chat *_strchr(char *s, char c)
+char *_strchr(char *s, char c)
 {
 int count;
 
