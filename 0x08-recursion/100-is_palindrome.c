@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strlen_recursion size
+ * _strlen_recursion - size
  * @s: pointer to string params
  * Return: recursion
  */
@@ -12,7 +12,7 @@ if (!*s)
 {
 return (0);
 }
-return ( 1 + _strlen_recursion(++s));
+return (1 + _strlen_recursion(++s));
 }
 
 /**
@@ -31,7 +31,7 @@ return (1);
 
 if (*s == *(s + l))
 {
-return (p1(s + 1, l -2));
+return (p1(s + 1, l - 2));
 }
 return (0);
 }
