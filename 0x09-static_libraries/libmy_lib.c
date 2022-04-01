@@ -1,4 +1,6 @@
 #include "main.h"
+#include <unistd.h>
+#include <stdio.h>
 /* Filename: libmy_lib.c */
 int main(void)
 {
