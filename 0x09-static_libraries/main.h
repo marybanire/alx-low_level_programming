@@ -1,6 +1,6 @@
 #ifdef MAIN_H
 #define MAIN_H
-
+#include <unistd.h>
 /**
  * _putchar - writes the character c to stdout
  * _islower - return 1 if c is lowercase, 0 otherwise
