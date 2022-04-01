@@ -1,14 +1,5 @@
 #ifdef MAIN_H
 #define MAIN_H
-#include <unistd.h>
-/**
- * _putchar - writes the character c to stdout
- * _islower - return 1 if c is lowercase, 0 otherwise
- * _isalpha - return 1 if c is upper or lowercase, 0 otherwise
- * _abs - computes absolute value of integer
- * _isupper - checks if char is capital letter
- * _isdigit - checks if int is a digit 0-9
- **/
 
 int _putchar(char c);
 int _islower(int c);
