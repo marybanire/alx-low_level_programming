@@ -1,2 +1,2 @@
-#include "main.h"
-ar rc libmy.a util_main.o util_net.o util_math.o
+ar -rc libmy.a *.o
+ranlib libmy.a
