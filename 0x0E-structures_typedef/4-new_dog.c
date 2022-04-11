@@ -1,77 +1,91 @@
-#include "dog.h"
 #include <stdlib.h>
-#include <stdio.h>
+#include "dog.h"
+
 /**
- *new_dog - creates a new dog.
- *@name: name of dog
- *@age: age of dog
- *@owner: owner of dog
- *Return: new dog
+ * _strlen - returns the length of a string
+ * @s: string to evaluate
+ *
+ * Return: the length of the string
+ */
+int _strlen(char *s)
+{
+int i;
+
+i = 0;
+
+while (s[i] != '\0')
+{
+i++;
+}
+
+return (i);
+}
+
+/**
+ * *_strcpy - copies the string pointed to by src
+ * including the terminating null byte (\0)
+ * to the buffer pointed to by dest
+ * @dest: pointer to the buffer in which we copy the string
+ * @src: string to be copied
+ *
+ * Return: the pointer to dest
+ */
+char *_strcpy(char *dest, char *src)
+{
+int len, i;
+
+len = 0;
+
+while (src[len] != '\0')
+{
+len++;
+}
+
+for (i = 0; i < len; i++)
+{
+dest[i] = src[i];
+}
+dest[i] = '\0';
+
+return (dest);
+}
+
+/**
+ * new_dog - creates a new dog
+ * @name: name of the dog
+ * @age: age of the dog
+ * @owner: owner of the dog
+ *
+ * Return: pointer to the new dog (Success), NULL otherwise
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-char *nname, *nowner;
-dog_t *ndog;
+dog_t *dog;
+int len1, len2;
 
-if (name == NULL || owner == NULL)
+len1 = _strlen(name);
+len2 = _strlen(owner);
+
+dog = malloc(sizeof(dog_t));
+if (dog == NULL)
 return (NULL);
 
-ndog = malloc(sizeof(dog_t));
-if (ndog == NULL)
-return (NULL);
-
-nname = malloc(sizeof(char) * _strl(name) + 1);
-if (nname == NULL)
+dog->name = malloc(sizeof(char) * (len1 + 1));
+if (dog->name == NULL)
 {
-free(ndog);
+free(dog);
 return (NULL);
 }
-/*_strcp(nname, name);*/
-
-nowner = malloc(sizeof(char) * _strl(owner) + 1);
-if (nowner == NULL)
+dog->owner = malloc(sizeof(char) * (len2 + 1));
+if (dog->owner == NULL)
 {
-free(ndog);
-free(nname);
+free(dog);
+free(dog->name);
 return (NULL);
 }
-_strcp(nname, name);
-_strcp(nowner, owner);
+_strcpy(dog->name, name);
+_strcpy(dog->owner, owner);
+dog->age = age;
 
-(*ndog).name = nname;
-(*ndog).age = age;
-(*ndog).owner = nowner;
-
-return (ndog);
-}
-
-/**
- *_strl - long of string
- *@s: string
- *Return: long of string
- */
-int _strl(char *s)
-{
-int con;
-for (con = 0; s[con] != '\0'; con++)
-;
-return (con);
-}
-
-/**
- *_strcp - copy a string
- *@dest: destiny
- *@src: origin
- *Return: copy of string
- */
-char *_strcp(char *dest, char *src)
-{
-int con1, con2;
-
-for (con1 = 0; src[con1] != '\0'; con1++)
-;
-
-for (con2 = 0; con2 < con1; con2++)
-dest[con2] = src[con2];
-return (dest);
+return (dog);
 }
