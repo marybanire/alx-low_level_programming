@@ -53,7 +53,7 @@ int _strl(char *s)
 {
 int con;
 for (con = 0; s[con] != '\0'; con++)
-		;
+;
 return (con);
 }
 
