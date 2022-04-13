@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "function_pointers.h"
 
 /**
@@ -5,16 +6,14 @@
  * @array: array to operate on
  * @size: size of array
  * @action: fuction to execute
- * Return: nothing
  **/
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-size_t i;
+unsigned int i;
 
-if (array == NULL)
+if (!array || !action)
 return;
+
 for (i = 0; i < size; i++)
-{
 action(array[i]);
-}
 }
