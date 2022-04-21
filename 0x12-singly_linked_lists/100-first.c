@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * tortoiseAndHare - print line before main
+ * bmain - print line before main
  * Return: nothing
  **/
 void __attribute__ ((constructor)) bmain()
