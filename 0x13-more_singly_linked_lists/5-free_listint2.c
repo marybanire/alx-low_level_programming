@@ -10,14 +10,17 @@
  **/
 void free_listint2(listint_t **head)
 {
-	listint_t *friend;
+	listint_t *temp;
+	listint_t *curr;
 
-	if (head == NULL)
-		return;
-	while (*head != NULL)
+	if (head != NULL)
 	{
-		friend = (*head)->next;
-		free(*head);
-		(*head) = friend;
+		curr = *head;
+		while ((temp = curr) != NULL)
+		{
+			curr = curr->next;
+			free(temp);
+		}
+		*head = NULL;
 	}
 }
