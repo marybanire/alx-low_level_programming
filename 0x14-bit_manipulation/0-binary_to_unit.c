@@ -1,63 +1,27 @@
 #include "main.h"
-#include <stdlib.h>
-#include <stdio.h>
-
 /**
- * power - returns 2 ^ y
- * @c: only calculate if c != 0
- * @y: exponent value
- * Return: 2 ^ y or 0 if fail
- */
-int power(char c, int y)
-{
-	if (c == '0')
-		return (0);
-	else if (y == 0)
-		return (1);
-	else if (y == 1)
-		return (2);
-	return (2 * power(c, y - 1));
-}
-/**
- * binary - converts a string binary number into a unsigned int
- * @b: binary string
- * @num: pointer to number where value is stored
- * Return: decimal as unsigned int
- */
-unsigned int binary(const char *b, unsigned int *num)
-{
-	int index;
-
-	if (b[1] == '\0')
-	{
-		*num = b[0] - '0';
-		return (1);
-	}
-	index = binary(b + 1, num);
-	*num +=  power(b[0], index);
-	return (index + 1);
-}
-
-/**
- * binary_to_uint - converts a string binary number into a unsigned int
- * @b: binary string
- * Return: decimal as unsigned int
+ * binary_to_uint - function that converts binary to unsigned int
+ * @b: takes in a conts char string
+ * Return: the converted unsigned int
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int num, i;
+	unsigned int con = 0, dec = 0;
 
-	num = 0;
-
-	if (b == NULL || b[0] == '\0')
+	if (b == NULL)
 		return (0);
 
-	for (i = 0; b[i] != '\0'; i++)
+	while (b[con] != '\0')
 	{
-		if (b[i] != '1' && b[i] != '0')
+		if (b[con] != '0' && b[con] != '1')
 			return (0);
+
+		dec <<= 1;
+
+		if (b[con] == '1')
+			dec ^= 1;
+		con++;
 	}
 
-	binary(b, &num);
-	return (num);
+	return (dec);
 }
